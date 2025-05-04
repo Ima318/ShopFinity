@@ -22,18 +22,22 @@ public class ProductDAOFactory {
     }
     
     public CreateProductDAO getCreateDAO() {
+
         return createDAO;
     }
     
     public ReadProductDAO getReadDAO() {
+
         return readDAO;
     }
     
     public UpdateProductDAO getUpdateDAO() {
+
         return updateDAO;
     }
     
     public DeleteProductDAO getDeleteDAO() {
+
         return deleteDAO;
     }
 } 
