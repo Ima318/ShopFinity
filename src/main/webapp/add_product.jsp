@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Add New Product</title>
     <link rel="stylesheet" type="text/css" href="css/add-product.css">
+
+
     <script>
         function validateForm() {
             // Validate product model number
@@ -39,9 +41,14 @@
             return true;
         }
     </script>
+
 </head>
 
 <body>
+
+<jsp:include page="/header.jsp"/>
+
+
 <div class="container">
     <h2>Add New Product</h2>
     <form action="AddProductServlet" method="post" onsubmit="return validateForm()">
@@ -65,6 +72,9 @@
 
         <input type="submit" name="submit" value="Add Product">
     </form>
+</div>
+
+<jsp:include page="/footer.jsp"/>
 </div>
 
 </body>
