@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.shopfinity.model.Product" %>
-<%@ page import="com.shopfinity.util.ProductDBUtil" %>
+<%@ page import="com.shopfinity.util.DBConnection" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.sql.SQLException" %>
 <!DOCTYPE html>
@@ -78,7 +78,7 @@
                     <% 
                         }
                     } catch (SQLException e) {
-                        out.println("<tr><td colspan='8' class='text-danger'>Error loading products: " + e.getMessage() + "</td></tr>");
+                            System.out.println("<tr><td colspan='8' class='text-danger'>Error loading products: " + e.getMessage() + "</td></tr>");
                     }
                     %>
                 </tbody>

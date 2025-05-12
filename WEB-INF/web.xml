@@ -8,4 +8,81 @@
         <welcome-file>sss.jsp</welcome-file> <!-- Change this to your desired file -->
     </welcome-file-list>
 
+    <servlet>
+        <servlet-name>ListProductsServlet</servlet-name>
+        <servlet-class>com.register.servlet.ListProductsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListProductsServlet</servlet-name>
+        <url-pattern>/ListProductsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>com.register.servlet.AddToCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <url-pattern>/addToCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.register.servlet.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/orderServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
+
+<servlet>
+<servlet-name>AddToCartServlet</servlet-name>
+<servlet-class>com.register.servlet.AddToCartServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>AddToCartServlet</servlet-name>
+<url-pattern>/AddToCartServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>ProductServlet</servlet-name>
+<servlet-class>com.register.servlet.ProductServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ProductServlet</servlet-name>
+<url-pattern>/products</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>OrderServlet</servlet-name>
+<servlet-class>com.register.servlet.OrderServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>OrderServlet</servlet-name>
+<url-pattern>/OrderServlet</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>UpdateOrderServlet</servlet-name>
+<servlet-class>com.register.servlet.UpdateOrderServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>UpdateOrderServlet</servlet-name>
+<url-pattern>/UpdateOrderServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>DeleteOrderServlet</servlet-name>
+<servlet-class>com.register.servlet.DeleteOrderServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>DeleteOrderServlet</servlet-name>
+<url-pattern>/DeleteOrderServlet</url-pattern>
+</servlet-mapping>
+
+
+
+
