@@ -1,0 +1,137 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.page-title  {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #4b2a7b;
+}
+
+.form-container {
+    margin: auto;
+    padding: 25px;
+    width: 1250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #4b2a7b;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #d3aa04;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .btn:hover {
+    background-color:#4b2a7b;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color:#4b2a7b;
+    outline: none;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4b2a7b;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-buttons button {
+    margin: 3px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #4b2a7b;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-buttons button:hover {
+    background-color: #4b2a7b;
+}
+/* styles.css - Additional Styling for Order Details */
+.order-list {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+}
+
+.order-list th, .order-list td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.order-list th {
+    background-color: #807f7f;
+    color: #fff;
+    font-size: small;
+}
+
+.order-list tr:hover {
+    background-color: #f1f1f1;
+}
+.btn{
+    background-color:#d3aa04 ;
+    color:black;
+}
+.action-buttons button {
+    margin: 3px;
+    padding: 5px 10px;
+    background-color:#d3aa04;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-buttons button:hover {
+    background-color:#4b2a7b;
+}

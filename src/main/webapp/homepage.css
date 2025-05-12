@@ -8,6 +8,8 @@
 
 body {
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -15,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(18, 37, 97)
+    background-color: rgb(25, 64, 195)
 
 ;
     padding: 20px 40px;
@@ -35,15 +37,27 @@ body {
 
 .nav-icons {
     display: flex;
-    gap: 15px;
+    gap: 45px;
 }
 
 .icon-box {
     width: 20px;
     height: 20px;
-    background-color: rgb(65, 105, 225);
+    background-color: rgb(221, 195, 51);
     border-radius: 3px;
 }
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+.nav-link:hover {
+    color:#4b2a7b;
+}
+
+
 
 /* Banner */
 .banner img {
@@ -70,10 +84,10 @@ body {
 .banner-text h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #1b2a4e;
-    padding-bottom: 20px;
+    color: #370852;
+    padding-bottom: 14px;
 }
-/* Intro Section 
+/* Intro Section
 .intro-section {
   text-align: center;
   padding: 50px 20px;
@@ -89,7 +103,7 @@ body {
 
 .banner-text p {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
@@ -98,7 +112,7 @@ body {
 
 .banner-image {
     flex: 1;
-    text-align: center;
+    text-align:center;
 }
 
 .banner-image img {
@@ -108,18 +122,15 @@ body {
 }
 
 
-
-
-
-
 /* Footer */
 .footer {
-    background-color: rgb(18, 37, 97)
-
-;
+    background: linear-gradient(90deg, rgba(76, 42, 155, 1) 0%, rgba(154, 87, 199, 1) 79%, rgba(237, 83, 204, 1) 100%);
     color: white;
     padding: 40px 20px 10px;
+    margin-top: auto;  /* Pushes the footer to the bottom */
+    width: 100%;
 }
+
 
 .footer-content {
     display: flex;
@@ -178,7 +189,7 @@ body {
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 100px;
     justify-content: center;
 }
 
@@ -186,7 +197,7 @@ body {
     background-color: #fff;
     padding: 15px;
     border: 1px solid #ddd;
-    width: 200px;
+    width: 250px;
     border-radius: 8px;
     transition: transform 0.2s ease;
 }
@@ -215,5 +226,19 @@ body {
     font-size: 16px;
     color: #555;
 }
-/*hee/*
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main-content {
+    flex: 1;
+}
 

@@ -3,8 +3,12 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/add_to_cart.jsp" value="file://$PROJECT_DIR$/target/classes" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/checkout.jsp" value="file://$PROJECT_DIR$/target/classes" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/index.jsp" value="file://$PROJECT_DIR$/target/classes" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/sss.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/testt.css.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/view-products.jsp" value="file://$PROJECT_DIR$/target/classes" />
       </map>
     </option>
   </component>
