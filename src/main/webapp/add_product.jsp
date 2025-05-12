@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Add New Product</title>
+
     <link rel="stylesheet" type="text/css" href="css/add-product.css">
 
 
@@ -49,6 +50,35 @@
 <jsp:include page="/header.jsp"/>
 
 
+<style>
+    .top-bar {
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px 40px 0 0;
+    }
+
+    .view-products-btn {
+        background-color: #370852;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .view-products-btn:hover {
+        background-color: #5c0b84;
+    }
+</style>
+
+<div class="top-bar">
+    <a href="list_products.jsp" class="view-products-btn">View Products</a>
+</div>
+
 <div class="container">
     <h2>Add New Product</h2>
     <form action="AddProductServlet" method="post" onsubmit="return validateForm()">
@@ -72,10 +102,9 @@
 
         <input type="submit" name="submit" value="Add Product">
     </form>
+
 </div>
 
 <jsp:include page="/footer.jsp"/>
-</div>
-
 </body>
 </html>

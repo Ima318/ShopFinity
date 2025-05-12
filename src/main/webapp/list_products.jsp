@@ -58,6 +58,8 @@
     </style>
 </head>
 <body>
+
+<jsp:include page="/header.jsp"/>
     <div class="container">
         <h2>Product List</h2>
         
@@ -107,5 +109,7 @@
             </tbody>
         </table>
     </div>
+
+    <jsp:include page="/footer.jsp"/>
 </body>
 </html> 
