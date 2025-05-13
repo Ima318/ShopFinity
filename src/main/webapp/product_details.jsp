@@ -12,7 +12,8 @@
 
   <style>
     body { margin: 0; font-family: Arial, sans-serif; }
-    .navbar { display: flex; align-items: center; justify-content: space-between; background-color: #4b2a7b
+    .navbar { display: flex; align-items: center; justify-content: space-between;background: #370852;
+      background: linear-gradient(90deg, rgba(55, 8, 82, 1) 0%, rgba(137, 20, 196, 1) 79%, rgba(237, 83, 204, 1) 100%);
     ; padding: 10px 20px; color: white; }
     .logo { font-size: 30px; font-weight: bold;height: 70px }
     .logo span { color: #ffdb4d; }
@@ -31,14 +32,14 @@
 </head>
 <body>
 <div class="navbar">
-  <div class="logo">Shop<span>F</span>inity</div>
+  <div class="logo"><span>S</span>hop<span>F</span>inity</div>
   <div class="search-box">
     <input type="text" placeholder="SEARCH THE ENTIRE STORE...">
     <button><i class="fas fa-search"></i></button>
   </div>
   <div class="nav-icons">
     <div class="language">Eng <i class="fas fa-chevron-down"></i></div>
-    <a href="index.jsp" title="Go to Home" class="nav-link">Home</a>
+    <a href="homepage.jsp" title="Go to Home" class="nav-link">Home</a>
     <a href="cart.jsp" title="View Cart" class="nav-link">Cart</a>
     <a href="/profile.jsp" title="View Profile" class="nav-link">Profile</a>
   </div>
@@ -91,7 +92,7 @@
     <div class="footer-section">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="./index.jsp">Home</a></li>
+        <li><a href="homepage.jsp">Home</a></li>
         <li><a href="#">Register</a></li>
         <li><a href="#">Login</a></li>
       </ul>

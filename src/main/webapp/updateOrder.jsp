@@ -13,24 +13,44 @@
 <html>
 <head>
   <title>Update Order</title>
+  <link rel="stylesheet" href="./css/update_order.css">
+
+
 </head>
 <body>
-<h2>Update Order</h2>
-<form action="UpdateOrderServlet" method="post">
-  <input type="hidden" name="orderId" value="<%= order.getOrderId() %>">
-  Name: <input type="text" name="name" value="<%= order.getName() %>" required><br>
-  Phone: <input type="text" name="phone" value="<%= order.getPhone() %>" required><br>
-  Address: <input type="text" name="address" value="<%= order.getAddress() %>" required><br>
-  Email: <input type="email" name="email" value="<%= order.getEmail() %>" required><br>
 
-  <!-- New Fields -->
-  Postal Code: <input type="text" name="postalCode" value="<%= order.getPostalCode() %>" required><br>
-  Special Instructions: <input type="text" name="specialInstructions" value="<%= order.getSpecialInstructions() %>"><br>
-  Preferred Delivery Time: <input type="text" name="preferredDeliveryTime" value="<%= order.getPreferredDeliveryTime() %>"><br>
+<div class="container">
+  <h2>Update Order Form</h2>
+  <form action="UpdateOrderServlet" method="post" class="update-form">
+    <input type="hidden" name="orderId" value="<%= order.getOrderId() %>">
 
-  Total Price: <input type="number" name="totalPrice" value="<%= order.getTotalPrice() %>" required><br>
-  <button type="submit">Update Order</button>
-</form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= order.getName() %>" required>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" value="<%= order.getPhone() %>" required>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" value="<%= order.getAddress() %>" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="<%= order.getEmail() %>" required>
+
+    <!-- New Fields -->
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" name="postalCode" value="<%= order.getPostalCode() %>" required>
+
+    <label for="specialInstructions">Special Instructions:</label>
+    <input type="text" id="specialInstructions" name="specialInstructions" value="<%= order.getSpecialInstructions() %>">
+
+    <label for="preferredDeliveryTime">Preferred Delivery Time:</label>
+    <input type="text" id="preferredDeliveryTime" name="preferredDeliveryTime" value="<%= order.getPreferredDeliveryTime() %>">
+
+    <label for="totalPrice">Total Price:</label>
+    <input type="number" id="totalPrice" name="totalPrice" value="<%= order.getTotalPrice() %>" required>
+
+    <button type="submit" class="submit-btn">Update Order</button>
+  </form>
+</div>
 </body>
 </html>
-

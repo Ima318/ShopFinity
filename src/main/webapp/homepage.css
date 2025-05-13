@@ -48,7 +48,7 @@ body {
 }
 
 .nav-link {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     margin: 0 10px;
@@ -103,7 +103,7 @@ body {
 
 .banner-text p {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
@@ -124,7 +124,8 @@ body {
 
 /* Footer */
 .footer {
-    background: linear-gradient(90deg, rgba(76, 42, 155, 1) 0%, rgba(154, 87, 199, 1) 79%, rgba(237, 83, 204, 1) 100%);
+    background: #370852;
+    background: linear-gradient(90deg, rgba(55, 8, 82, 1) 0%, rgba(137, 20, 196, 1) 79%, rgba(237, 83, 204, 1) 100%);
     color: white;
     padding: 40px 20px 10px;
     margin-top: auto;  /* Pushes the footer to the bottom */
@@ -189,7 +190,7 @@ body {
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 80px;
     justify-content: center;
 }
 
@@ -197,7 +198,7 @@ body {
     background-color: #fff;
     padding: 15px;
     border: 1px solid #ddd;
-    width: 250px;
+    width: 350px;
     border-radius: 8px;
     transition: transform 0.2s ease;
 }

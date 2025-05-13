@@ -50,14 +50,14 @@
 <body>
 
 <div class="navbar">
-    <div class="logo">Shop<span>F</span>inity</div>
+    <div class="logo"><span>S</span>hop<span>F</span>inity</div>
     <div class="search-box">
         <input type="text" placeholder="SEARCH THE ENTIRE STORE...">
         <button><i class="fas fa-search"></i></button>
     </div>
     <div class="nav-icons">
         <div class="language">Eng <i class="fas fa-chevron-down"></i></div>
-        <a href="index.jsp" title="Go to Home" class="nav-link">Home</a>
+        <a href="homepage.jsp" title="Go to Home" class="nav-link">Home</a>
         <a href="cart.jsp" title="View Cart" class="nav-link">Cart</a>
         <a href="/profile.jsp" title="View Profile" class="nav-link">Profile</a>
     </div>
@@ -126,7 +126,7 @@
         <div class="footer-section">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="./index.jsp">Home</a></li>
+                <li><a href="homepage.jsp">Home</a></li>
                 <li><a href="#">Register</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
