@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="./css/welcome.css">
 </head>
 <body>
-<<<<<<< HEAD
+
 <div class="video-container">
     <video autoplay muted loop class="background-video">
         <source src="./videos/v3.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-=======
+
 
 <!--<div class="header">
     <h1>ShopFinity</h1>
@@ -39,7 +39,7 @@
         <a href="/profile.jsp" title="View Profile" class="nav-link">Profile</a>
     </div>
 
->>>>>>> 82c770d1d564206e45a0aea5ee52c17c2defd5e6
+
 </div>
 
 <!-- Top Right: Login and Signup -->
@@ -63,6 +63,8 @@
         <a href="aboutus.jsp">About Us</a>
         <a href="#">Contact Us</a>
     </div>
+</div>
+
 </div>
 </body>
 </html>

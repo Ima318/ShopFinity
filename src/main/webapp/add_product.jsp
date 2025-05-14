@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Add New Product</title>
-<<<<<<< HEAD
+
     <link rel="stylesheet" type="text/css" href="./css/add-product.css">
-=======
+
 
     <link rel="stylesheet" type="text/css" href="css/add-product.css">
 
 
->>>>>>> 82c770d1d564206e45a0aea5ee52c17c2defd5e6
+
     <script>
         function validateForm() {
             // Validate product model number
