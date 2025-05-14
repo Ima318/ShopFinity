@@ -47,7 +47,7 @@ textarea:focus {
 }
 
 input[type="submit"] {
-    background-color: #333;
+    background-color: #393939;
     color: #fff;
     border: none;
     padding: 10px 15px; /* Increased padding */
@@ -59,3 +59,61 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #000; /* Darker hover color */
 }
+
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container h2 {
+    color: #370852;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px;
+    text-align: left;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #370852;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5c0b84;
+}
+
+
+
+
+
+
