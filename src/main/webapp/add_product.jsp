@@ -93,7 +93,7 @@
         <input type="text" id="modelNumber" name="modelNumber" required>
 
         <label for="picture">Product Picture (URL or Path):</label>
-        <input type="text" id="picture" name="picture">
+        <input type="file" id="picture" name="picture">
 
         <label for="price">Product Price:</label>
         <input type="number" id="price" name="price" >

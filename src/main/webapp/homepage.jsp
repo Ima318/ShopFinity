@@ -82,7 +82,7 @@
         <div class="product-card">
             <!-- Clickable link to product details page -->
             <a href="product_details.jsp?id=<%= product.getId() %>" style="text-decoration: none; color: inherit;">
-                <img src="images/<%= product.getPicture() %>" alt="<%= product.getName() %>" />
+                <img src="/webapp/images/a1.jpg"<%= product.getPicture() %>" alt="<%= product.getName() %>" />
                 <h3><%= product.getName() %></h3>
                 <p>Model: <%= product.getModelNumber() %></p>
                 <p>Price: Rs. <%= product.getPrice() %></p>
@@ -106,7 +106,7 @@
         <div class="footer-section">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="./homepage.jsp">Home</a></li>
+                <li><a href="/homepage.jsp">Home</a></li>
                 <li><a href="#">Register</a></li>
                 <li><a href="#">Login</a></li>
             </ul>

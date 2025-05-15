@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ & Contact</title>
 
-    <link rel="stylesheet" href="src/main/webapp/contact.css">
+    <!-- Fixed CSS Path -->
+    <link rel="stylesheet" href="./css/contactus.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -32,17 +33,17 @@
 <div class="faq">
     <div class="faq-name">
         <h1 class="faq-header">Have <br> Questions?</h1>
-        <img class="faq-img" src="../BoatSafari/image/faq.webp" alt="FAQ Illustration">
+        <img class="faq-img" src="images/faq.webp" alt="FAQ Illustration">
     </div>
 
     <div class="faqbox">
+        <!-- Example FAQ Item -->
         <div class="faq-wrapper">
             <input type="checkbox" class="faq-trigger" id="faq-trigger-1">
             <label class="faq-title" for="faq-trigger-1">How far in advance should I book my trip?</label>
             <div class="faq-detail">
                 <p>
-                    If the packages are available, you can even book one day before. But we advise you to book
-                    at least one month before because our packages are usually booked in advance.
+                    Booking at least one month in advance is recommended as packages often get reserved early.
                 </p>
             </div>
         </div>
@@ -52,8 +53,7 @@
             <label class="faq-title" for="faq-trigger-2">How to book a trip?</label>
             <div class="faq-detail">
                 <p>
-                    Unregistered users must register first. If you already have an account, log in using your username and password.
-                    If you forgot your password, click "Forgot password." Then go to the packages page, choose your preferred package, and proceed to payment.
+                    Register or log in, visit the packages page, choose a package, and proceed to payment.
                 </p>
             </div>
         </div>
@@ -63,17 +63,17 @@
             <label class="faq-title" for="faq-trigger-3">Are there any age restrictions?</label>
             <div class="faq-detail">
                 <p>
-                    Anyone under 18 must be accompanied by a parent or guardian who must also sign a responsibility agreement form.
+                    Minors under 18 must be accompanied by a parent or guardian who signs a responsibility agreement.
                 </p>
             </div>
         </div>
 
         <div class="faq-wrapper">
             <input type="checkbox" class="faq-trigger" id="faq-trigger-4">
-            <label class="faq-title" for="faq-trigger-4">What are the safety measures in place?</label>
+            <label class="faq-title" for="faq-trigger-4">What safety measures are in place?</label>
             <div class="faq-detail">
                 <p>
-                    Each person receives a safety grab bag. A trained tour guide and captain are available, and our emergency response team will act swiftly in case of an issue.
+                    Safety kits are provided, and trained staff are present during the entire trip.
                 </p>
             </div>
         </div>
@@ -84,7 +84,7 @@
 <div class="contact-section">
     <h2 style="color: rgb(2, 119, 187); font-size: 36px; margin-bottom: 20px;">Got More Questions? </h2>
 
-    <!-- Display success/error message if any -->
+    <!-- Display success/error message -->
     <%
         String message = (String) request.getAttribute("message");
         if (message != null) {
@@ -100,17 +100,16 @@
         <input type="email" id="email" name="email" required>
 
         <label for="contactNumber">Your Contact Number</label>
-        <input type="text" id="contactNumber" name="contactNumber" required pattern="^\d{10}$" title="Please enter a valid 10-digit contact number">
+        <input type="text" id="contactNumber" name="contactNumber" required pattern="^[0-9]{10}$" title="Enter a valid 10-digit number">
 
         <label for="question">Your Question</label>
         <textarea id="question" name="question" rows="4" required></textarea>
 
         <button type="submit">Submit Question</button>
     </form>
-
 </div>
 
-<!-- Contact Us Questions Section -->
+<!-- Displaying User Questions -->
 <div class="contact-section">
     <h2 style="color: rgb(2, 119, 187); font-size: 36px; margin-bottom: 20px;">Some More of Your Questions!</h2>
     <table class="question-table">
@@ -122,9 +121,10 @@
             <th>Actions</th>
         </tr>
         <%
-            ContactDAO dao = new ContactDAO((Connection) application.getAttribute("dbConnection"));
-            List<Contact> contacts = dao.getAllContacts();
-            for (Contact c : contacts) {
+            try {
+                ContactDAO dao = new ContactDAO((Connection) application.getAttribute("dbConnection"));
+                List<Contact> contacts = dao.getAllContacts();
+                for (Contact c : contacts) {
         %>
         <tr>
             <td><%= c.getName() %></td>
@@ -136,6 +136,11 @@
                 <a href="DeleteContactServlet?id=<%= c.getId() %>" class="btn" onclick="return confirm('Are you sure you want to delete this question?')">Delete</a>
             </td>
         </tr>
+        <%
+            }
+        } catch (Exception e) {
+        %>
+        <tr><td colspan="5">Error fetching contacts: <%= e.getMessage() %></td></tr>
         <% } %>
     </table>
 </div>

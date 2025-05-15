@@ -86,3 +86,45 @@
 
 
 
+        <!-- AddContactServlet -->
+<servlet>
+<servlet-name>AddContactServlet</servlet-name>
+<servlet-class>com.contact.servlet.AddContactServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>AddContactServlet</servlet-name>
+<url-pattern>/addContact</url-pattern>
+</servlet-mapping>
+
+        <!-- DeleteContactServlet -->
+<servlet>
+<servlet-name>DeleteContactServlet</servlet-name>
+<servlet-class>com.contact.servlet.DeleteContactServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>DeleteContactServlet</servlet-name>
+<url-pattern>/deleteContact</url-pattern>
+</servlet-mapping>
+
+        <!-- EditContactServlet -->
+<servlet>
+<servlet-name>EditContactServlet</servlet-name>
+<servlet-class>com.contact.servlet.EditContactServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>EditContactServlet</servlet-name>
+<url-pattern>/editContact</url-pattern>
+</servlet-mapping>
+
+        <!-- ViewContactServlet -->
+<servlet>
+<servlet-name>ViewContactServlet</servlet-name>
+<servlet-class>com.contact.servlet.ViewContactServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ViewContactServlet</servlet-name>
+<url-pattern>/viewContacts</url-pattern>
+</servlet-mapping>
+
+
+
