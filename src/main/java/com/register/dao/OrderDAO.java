@@ -18,11 +18,9 @@ public class OrderDAO {
             stmt.setString(2, order.getPhone());
             stmt.setString(3, order.getAddress());
             stmt.setString(4, order.getEmail());
-
             stmt.setString(5, order.getPostalCode());
             stmt.setString(6, order.getSpecialInstructions());
             stmt.setString(7, order.getPreferredDeliveryTime());
-
             stmt.setDouble(8, order.getTotalPrice());
             return stmt.executeUpdate() > 0;
         }

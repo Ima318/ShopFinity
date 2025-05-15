@@ -11,15 +11,16 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.Connection;
 
 @WebServlet("/EditContactServlet")
 public class EditContactServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // Show edit form
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-
-        try (Connection conn = DBConnection.getInstance().getConnection()) {
-            ContactDAO dao = new ContactDAO(conn);
+        try {
+            ContactDAO dao = new ContactDAO();
             Contact contact = dao.getContactById(id);
 
             if (contact != null) {
@@ -35,5 +36,36 @@ public class EditContactServlet extends HttpServlet {
             request.getSession().setAttribute("message", "Error loading contact details: " + e.getMessage());
             response.sendRedirect("contact.jsp");
         }
+    }
+
+    // Process update
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String contactNumber = request.getParameter("contactNumber");
+        String question = request.getParameter("question");
+
+        Contact contact = new Contact();
+        contact.setId(id);
+        contact.setName(name);
+        contact.setEmail(email);
+        contact.setContactNumber(contactNumber);
+        contact.setQuestion(question);
+
+        try {
+            ContactDAO dao = new ContactDAO();
+            dao.updateContact(contact);
+            request.getSession().setAttribute("message", "Your question has been updated successfully!");
+        } catch (Exception e) {
+            e.printStackTrace();
+            request.getSession().setAttribute("message", "Error updating your question: " + e.getMessage());
+        } finally {
+            DBConnection.getInstance().closeConnection();
+        }
+
+        response.sendRedirect("contact.jsp");
     }
 }

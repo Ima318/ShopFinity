@@ -41,15 +41,15 @@
             cursor: pointer;
         }
         .btn-primary {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #d3b8e6 ;
+            color: purple;
         }
         .btn-secondary {
-            background-color: #2196F3;
-            color: white;
+            background-color: lightgrey;
+            color: purple;
         }
         .error {
-            color: red;
+            color: lightgrey;
             margin: 10px 0;
         }
     </style>

@@ -117,7 +117,7 @@
     </label>
 
     <label>Special Instructions
-      <input type="text" name="SpecialInstructions" placeholder="Leave at door">
+      <input type="text" name="specialInstructions" placeholder="Leave at door">
     </label>
 
     <label>Preferred Delivery Time (HH:MM)

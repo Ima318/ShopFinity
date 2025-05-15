@@ -40,16 +40,16 @@
             margin: 5px;
         }
         .btn-primary {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #d3b8e6 ;
+            color: purple;
         }
         .btn-edit {
-            background-color: #2196F3;
-            color: white;
+            background-color: lightgray;
+            color: purple;
         }
         .btn-delete {
-            background-color: #f44336;
-            color: white;
+            background-color: lightgrey;
+            color: purple;
         }
         .error {
             color: red;

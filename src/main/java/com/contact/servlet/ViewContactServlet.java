@@ -11,24 +11,18 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.Connection;
 import java.util.List;
 
 @WebServlet("/ViewContactServlet")
 public class ViewContactServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try (Connection conn = DBConnection.getInstance().getConnection()) {
-            if (conn != null) {
-                ContactDAO dao = new ContactDAO(conn);
-                List<Contact> contacts = dao.getAllContacts();
+        try {
+            ContactDAO dao = new ContactDAO();
+            List<Contact> contacts = dao.getAllContacts();
 
-                request.setAttribute("contacts", contacts);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("contact.jsp");
-                dispatcher.forward(request, response);
-            } else {
-                request.getSession().setAttribute("message", "Database connection not available.");
-                response.sendRedirect("contact.jsp");
-            }
+            request.setAttribute("contacts", contacts);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("contact.jsp");
+            dispatcher.forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
             request.getSession().setAttribute("message", "Error fetching contacts: " + e.getMessage());

@@ -7,8 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CreateProductDAO {
-    private static final String INSERT_PRODUCT_SQL = 
-        "INSERT INTO products (name, model_number, picture, price, description, quantity) VALUES (?, ?, ?, ?, ?, ?)";
+    private static final String INSERT_PRODUCT_SQL = "INSERT INTO products (name, model_number, picture, price, description, quantity) VALUES (?, ?, ?, ?, ?, ?)";
     
     public boolean createProduct(Product product) throws SQLException {
         try (Connection conn = DBConnection.getInstance().getConnection();

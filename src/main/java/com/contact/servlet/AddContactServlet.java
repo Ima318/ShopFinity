@@ -10,7 +10,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.Connection;
 
 @WebServlet("/AddContactServlet")
 public class AddContactServlet extends HttpServlet {
@@ -26,16 +25,10 @@ public class AddContactServlet extends HttpServlet {
         contact.setContactNumber(contactNumber);
         contact.setQuestion(question);
 
-        Connection conn = null;
         try {
-            conn = DBConnection.getInstance().getConnection();
-            if (conn != null) {
-                ContactDAO dao = new ContactDAO(conn);
-                dao.addContact(contact);
-                request.getSession().setAttribute("message", "Your question has been submitted successfully!");
-            } else {
-                request.getSession().setAttribute("message", "Database connection is not available.");
-            }
+            ContactDAO dao = new ContactDAO();
+            dao.addContact(contact);
+            request.getSession().setAttribute("message", "Your question has been submitted successfully!");
         } catch (Exception e) {
             e.printStackTrace();
             request.getSession().setAttribute("message", "Error submitting your question: " + e.getMessage());

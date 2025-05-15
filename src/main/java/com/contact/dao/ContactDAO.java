@@ -9,21 +9,16 @@ import java.util.List;
 public class ContactDAO {
     private Connection connection;
 
-    // Constructor to initialize connection
-    public ContactDAO(Connection connection) {
-        this.connection = connection;
+    // Constructor to initialize the connection using the Singleton instance
+    public ContactDAO() {
+        this.connection = DBConnection.getInstance().getConnection();
         if (this.connection == null) {
-            System.err.println("Warning: DB connection is null in ContactDAO.");
+            System.err.println("Warning: Failed to obtain DB connection in ContactDAO.");
         }
     }
 
-
     // Create - Add a new contact
     public void addContact(Contact contact) throws SQLException {
-        if (connection == null) {
-            throw new SQLException("Database connection is not available.");
-        }
-
         String sql = "INSERT INTO contact_us (name, email, contact_number, question) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, contact.getName());
@@ -41,11 +36,7 @@ public class ContactDAO {
     // Read all contacts
     public List<Contact> getAllContacts() throws SQLException {
         List<Contact> contactList = new ArrayList<>();
-        if (connection == null) {
-            throw new SQLException("Database connection is not available.");
-        }
-
-        String sql = "SELECT * FROM contact_us ORDER BY created_at DESC";
+        String sql = "SELECT * FROM contact_us";
         try (Statement stmt = connection.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
@@ -67,10 +58,6 @@ public class ContactDAO {
 
     // Read a contact by ID
     public Contact getContactById(int id) throws SQLException {
-        if (connection == null) {
-            throw new SQLException("Database connection is not available.");
-        }
-
         String sql = "SELECT * FROM contact_us WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -96,10 +83,6 @@ public class ContactDAO {
 
     // Update a contact
     public void updateContact(Contact contact) throws SQLException {
-        if (connection == null) {
-            throw new SQLException("Database connection is not available.");
-        }
-
         String sql = "UPDATE contact_us SET name = ?, email = ?, contact_number = ?, question = ? WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, contact.getName());
@@ -117,10 +100,6 @@ public class ContactDAO {
 
     // Delete a contact
     public void deleteContact(int id) throws SQLException {
-        if (connection == null) {
-            throw new SQLException("Database connection is not available.");
-        }
-
         String sql = "DELETE FROM contact_us WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);

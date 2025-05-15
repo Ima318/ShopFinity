@@ -1,7 +1,6 @@
 <%@ page import="com.contact.dao.ContactDAO" %>
 <%@ page import="com.contact.model.Contact" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.sql.Connection" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,56 +32,55 @@
 <div class="faq">
     <div class="faq-name">
         <h1 class="faq-header">Have <br> Questions?</h1>
-        <img class="faq-img" src="images/faq.webp" alt="FAQ Illustration">
+        <img class="faq-img" src="./Images/f.png" alt="FAQ Illustration">
     </div>
 
     <div class="faqbox">
         <!-- Example FAQ Item -->
         <div class="faq-wrapper">
             <input type="checkbox" class="faq-trigger" id="faq-trigger-1">
-            <label class="faq-title" for="faq-trigger-1">How far in advance should I book my trip?</label>
+            <label class="faq-title" for="faq-trigger-1">What is your return and refund policy?</label>
             <div class="faq-detail">
                 <p>
-                    Booking at least one month in advance is recommended as packages often get reserved early.
+                    We offer a 30-day return policy on most items. Please visit our Returns page for more details on how to initiate a return.
                 </p>
             </div>
         </div>
 
         <div class="faq-wrapper">
             <input type="checkbox" class="faq-trigger" id="faq-trigger-2">
-            <label class="faq-title" for="faq-trigger-2">How to book a trip?</label>
+            <label class="faq-title" for="faq-trigger-2">Do you ship internationally?</label>
             <div class="faq-detail">
-                <p>
-                    Register or log in, visit the packages page, choose a package, and proceed to payment.
-                </p>
+                <p>Yes, we ship to most countries. Shipping fees and delivery times vary by location.
+                   </p>
             </div>
         </div>
 
         <div class="faq-wrapper">
             <input type="checkbox" class="faq-trigger" id="faq-trigger-3">
-            <label class="faq-title" for="faq-trigger-3">Are there any age restrictions?</label>
+            <label class="faq-title" for="faq-trigger-3">How long does shipping take?</label>
             <div class="faq-detail">
-                <p>
-                    Minors under 18 must be accompanied by a parent or guardian who signs a responsibility agreement.
-                </p>
+                <p>Delivery times vary depending on your location and the shipping method chosen at checkout. Typically, orders arrive within 3-7 business days.</p>
             </div>
         </div>
 
         <div class="faq-wrapper">
             <input type="checkbox" class="faq-trigger" id="faq-trigger-4">
-            <label class="faq-title" for="faq-trigger-4">What safety measures are in place?</label>
+            <label class="faq-title" for="faq-trigger-4">Can I change or cancel my order?</label>
             <div class="faq-detail">
-                <p>
-                    Safety kits are provided, and trained staff are present during the entire trip.
-                </p>
+                <p>You can change or cancel your order within a limited time after purchase. Please contact our support team as soon as possible.</p>
             </div>
         </div>
+
+
+
+
     </div>
 </div>
 
 <!-- Contact Us Form Section -->
 <div class="contact-section">
-    <h2 style="color: rgb(2, 119, 187); font-size: 36px; margin-bottom: 20px;">Got More Questions? </h2>
+    <h2 style="color: purple; font-size: 36px; margin-bottom: 20px;">Got More Questions? </h2>
 
     <!-- Display success/error message -->
     <%
@@ -111,7 +109,7 @@
 
 <!-- Displaying User Questions -->
 <div class="contact-section">
-    <h2 style="color: rgb(2, 119, 187); font-size: 36px; margin-bottom: 20px;">Some More of Your Questions!</h2>
+    <h2 style="color: purple; font-size: 36px; margin-bottom: 20px;">Some More of Your Questions!</h2>
     <table class="question-table">
         <tr>
             <th>Name</th>
@@ -122,7 +120,7 @@
         </tr>
         <%
             try {
-                ContactDAO dao = new ContactDAO((Connection) application.getAttribute("dbConnection"));
+                ContactDAO dao = new ContactDAO();
                 List<Contact> contacts = dao.getAllContacts();
                 for (Contact c : contacts) {
         %>

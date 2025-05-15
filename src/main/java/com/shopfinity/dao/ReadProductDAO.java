@@ -20,11 +20,13 @@ public class ReadProductDAO {
         try (Connection conn = DBConnection.getInstance().getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(GET_ALL_PRODUCTS_SQL)) {
-            
+
+             System.out.println(stmt);
             while (rs.next()) {
                 products.add(extractProductFromResultSet(rs));
             }
         }
+        System.out.println(products);
         return products;
     }
     

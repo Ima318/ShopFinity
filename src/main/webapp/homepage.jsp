@@ -78,17 +78,19 @@
 
             if (products != null && !products.isEmpty()) {
                 for (Product product : products) {
+                    String pictureLocation = product.getPicture();
         %>
         <div class="product-card">
-            <!-- Clickable link to product details page -->
             <a href="product_details.jsp?id=<%= product.getId() %>" style="text-decoration: none; color: inherit;">
-                <img src="/webapp/images/a1.jpg"<%= product.getPicture() %>" alt="<%= product.getName() %>" />
+                <img src="./<%= product.getPicture()%>"
+                     alt="<%= product.getName() %>" style="width: 200px; height: 200px;" />
                 <h3><%= product.getName() %></h3>
                 <p>Model: <%= product.getModelNumber() %></p>
                 <p>Price: Rs. <%= product.getPrice() %></p>
                 <p>Stock: <%= product.getQuantity() %> pcs</p>
             </a>
         </div>
+
         <%
             }
         } else {
@@ -97,6 +99,9 @@
         <% } %>
     </div>
 </div>
+<a href="add_product.jsp" class="addproduct-button">Add New Product</a>
+
+
 <div class="footer">
     <div class="footer-content">
         <div class="footer-section">

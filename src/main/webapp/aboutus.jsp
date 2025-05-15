@@ -17,14 +17,14 @@
 <div class="links">
     <a href="homepage.jsp">Home</a>
     <a href="aboutus.jsp">About Us</a>
-    <a href="#">Contact Us</a>
+    <a href="contact.jsp">Contact Us</a>
 </div>
 
 <div class="container">
     <section class="intro">
         <h1>About Us</h1>
         <div class="content">
-            <img src="./images/a1.jpg" alt="Shopfinity" />
+            <img src="./Images/a1.jpg" alt="Shopfinity" />
             <div>
                 <h2>Welcome to Shopfinity - Your Ultimate Shopping Destination!</h2>
                 <p>At Shopfinity, we believe that shopping should be an enjoyable and effortless experience. As a leading online e-commerce platform, we are dedicated to bringing you a diverse range of high-quality products at the best prices. Whether you're looking for fashion, electronics, home essentials, or the latest gadgets, Shopfinity has you covered.</p>
@@ -34,7 +34,7 @@
 
     <section class="story">
         <div class="content">
-            <img src="./images/a2.webp" alt="Our Story" />
+            <img src="./Images/a2.webp" alt="Our Story" />
             <div>
                 <h2>Our Story</h2>
                 <p>Shopfinity was founded with a vision to redefine the online shopping experience. Starting as a small venture, we have grown into a dynamic platform that connects thousands of shoppers with quality products from trusted sellers worldwide. Our journey has been fueled by our commitment to customer satisfaction and our passion for innovation.</p>
@@ -44,7 +44,7 @@
 
     <section class="mission">
         <div class="content">
-            <img src="./images/a3.jpg" alt="Our Mission" />
+            <img src="./Images/a3.jpg" alt="Our Mission" />
             <div>
                 <h2>Our Mission</h2>
                 <p>Our mission is simple: to provide an exceptional shopping experience by offering a wide selection of products, secure payment options, and prompt customer support. We are here to make online shopping smooth, reliable, and enjoyable for everyone.</p>
@@ -54,7 +54,7 @@
 
     <section class="team">
         <div class="content">
-            <img src="./images/a4.jpg" alt="Our Team" />
+            <img src="./Images/a4.jpg" alt="Our Team" />
             <div>
                 <h2>Meet Our Team</h2>
                 <p>Behind Shopfinity is a team of passionate professionals committed to enhancing your online shopping journey. Our dedicated customer support, product curation experts, and tech enthusiasts work tirelessly to ensure you have a seamless experience every time you visit our site.</p>
@@ -64,7 +64,7 @@
 
     <section class="values">
         <div class="content">
-            <img src="./images/a5.jpeg" alt="Our Values" />
+            <img src="./Images/a5.jpeg" alt="Our Values" />
             <div>
                 <h2>Our Values</h2>
                 <ul>
@@ -79,7 +79,7 @@
 
     <section class="achievements">
         <div class="content">
-            <img src="./images/a6.jpg" alt="Achievements" />
+            <img src="./Images/a6.jpg" alt="Achievements" />
             <div>
                 <h2>Our Achievements</h2>
                 <p>- Trusted by thousands of customers globally.</p>

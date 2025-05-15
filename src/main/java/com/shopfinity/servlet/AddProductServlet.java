@@ -25,7 +25,8 @@ public class AddProductServlet extends HttpServlet {
             double price = Double.parseDouble(request.getParameter("price"));
             String description = request.getParameter("description");
             int quantity = Integer.parseInt(request.getParameter("quantity"));
-            
+
+
             // Check if model number already exists
             if (ProductDAOFactory.getInstance().getCreateDAO().isModelNumberExists(modelNumber)) {
                 request.setAttribute("error", "Model number already exists!");
@@ -40,8 +41,10 @@ public class AddProductServlet extends HttpServlet {
             boolean success = ProductDAOFactory.getInstance().getCreateDAO().createProduct(product);
             
             if (success) {
+                System.out.println("Product added successfully!");
                 response.sendRedirect("list_products.jsp");
             } else {
+                System.out.println("Product could not be added!");
                 request.setAttribute("error", "Failed to add product!");
                 request.getRequestDispatcher("add_product.jsp").forward(request, response);
             }
