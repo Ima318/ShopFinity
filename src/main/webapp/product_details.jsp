@@ -60,7 +60,7 @@
     if (product != null) {
   %>
   <div class="image-section">
-    <img src="images/<%= product.getPicture() %>" alt="<%= product.getName() %>" class="product-image"/>
+    <img src="./<%= product.getPicture()%>" alt="<%= product.getName() %>" class="product-image"/>
   </div>
   <div class="details-section">
     <p class="brand">Brand: <a href="#">ShopFinity</a></p>

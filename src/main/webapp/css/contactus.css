@@ -1,0 +1,188 @@
+/* Base & Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
+}
+
+/* FAQ Header */
+.header2 {
+    text-align: center;
+    background: #370852;
+    background: linear-gradient(90deg, rgba(55, 8, 82, 1) 0%, rgba(137, 20, 196, 1) 79%, rgba(237, 83, 204, 1) 100%);
+    color: white;
+    padding: 40px 20px;
+}
+.header2-title {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+}
+.header2-descript {
+    margin: 8px 0 24px;
+    font-weight: 300;
+}
+.header2 .search {
+    display: inline-flex;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.header2 .search input {
+    border: none;
+    padding: 10px;
+    width: 200px;
+    outline: none;
+}
+.header2 .search button {
+    background: #fff;
+    border: none;
+    padding: 0 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* FAQ Content */
+.faq {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+.faq-name {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+.faq-img {
+    max-width: 100%;
+    height: auto;
+}
+.faqbox {
+    flex: 2;
+    min-width: 300px;
+}
+.faq-wrapper {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+}
+.faq-trigger {
+    display: none;
+}
+.faq-title {
+    display: block;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+.faq-title::after {
+    content: '+';
+    position: absolute;
+    right: 12px;
+}
+.faq-trigger:checked + .faq-title::after {
+    content: '–';
+}
+.faq-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 12px;
+}
+.faq-trigger:checked ~ .faq-detail {
+    max-height: 200px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+}
+
+/* Contact Section & Form */
+.contact-section {
+    background: white;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    align-content: center;
+}
+.contact-section h2 {
+    margin-top: 0;
+    font-size: 32px;
+    text-align: center;
+}
+.contact-section form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 1000px;
+}
+.contact-section label {
+    font-weight: 600;
+}
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 1000px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+.contact-section button {
+    width: 200px;
+    padding: 12px;
+    background: #d3b8e6;
+    color: purple;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-self: center;
+}
+.contact-section .message {
+    background: #e0f7fa;
+    color: #490249;
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Questions Table */
+.question-table {
+    width: 1200px;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+.question-table th,
+.question-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.question-table th {
+    background: #f0f0f0;
+    font-weight: 600;
+}
+.question-table tr:nth-child(even) {
+    background: #fafafa;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    background: #d3b8e6;
+    color: purple;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.btn:hover {
+    background: #ad8bda;
+}
